@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+<!-- start of NavBar -->
+    <div class="nav-container">
+        <nav>
+            <div class="logo">
+                <img src="data:image/jpeg;base64,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"
+                    alt="">
+            </div>
+            <div class="nav-item">
+                <a href="">Home</a>
+                <a href="" class="drop">Features <i class="fa-solid fa-angle-down"></i></a>
+                <a href="" class=" active">Blog</a>
+                <a href="">Portfolio <i class="fa-solid fa-angle-down"></i></a>
+                <a href="">Contact</a>
+            </div>
+        </nav>
+    </div>
+
+<!-- End of NavBar -->
+
+<!-- Main section starts -->
+
+    <div class="main-section">
+        <p style="margin-left: 11.5rem; margin-top: 1rem; font-size: 12px;"> <a href="">Home</a>/ <a href="">Blog</a> /
+            <a href="">Carmels tootsie roll croissant choclate</a>
+        </p>
+        <div class="header">
+            <h1>HELLO! WELCOME TO BLOG</h1>
+            <p>Pastry gummi bears gummies marzipan danish jelly beans chupa chups marshmallow</p>
+        </div>
+    </div>
+
+    <div class="contents">
+
+    <!-- Contents of left side starts -->
+        <div class="left">
+
+            <div class="camera">
+                <i class="fa-solid fa-camera"></i>
+            </div>
+
+            <p> <span><i class="fa-solid fa-user"></i></span> by admin</p>
+            <p> <span><i class="fa-regular fa-calendar"></i></span> 05-04-23</p>
+            <p><span><i class="fa-solid fa-message"></i></span> 75 Comments</p>
+            <p><span><i class="fa-solid fa-pencil"></i></span> candy,jelly </p>
+        </div>
+
+        <!-- contents of left side ends here  -->
+<!-- contents of middle part start here -->
+        <div class="mid">
+            <div class="image">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACoCAMAAABt9SM9AAAAA1BMVEXT09OdeqMBAAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAO8GxYgAAb0jQ/cAAAAASUVORK5CYII="
+                    alt="">
+            </div>
+
+            <h4> Caramels tootsie roll croissant chocolate</h4>
+            <p>Bear claw danish bear claw soufflé marshmallow bonbon candy marzipan candy. Lemon drops applicake
+                lollipop sweet roll gummies dragée. Cupcake donut caramels chocolate cake choclate bar applicake. Chupa
+                chups biscuit croissant.</p>
+            <P>Danish jelly beans carrot cake gummi bears carrot cake. Tiramisu cookie wafer jelly bean cmels tart. Tart
+                sugar plum sweet. Wafer pastry ice cream. Sweet caramels sweet roll powder s Frcake croissant muffin.
+                Faworki liquorice ice cream lemon drops danish. Gummies chupa chupcookie. Gummi bears cookie icing apple
+                pie gummi bears chupa chups. Wafer sesame snaps chocolate bar gummi bears.
+            </P>
+            <P>Cake carrot cake jujubes. Apple pie jelly beans gummi bears. Tiramisu wypas marzipan oat cake carrot cake
+                tart donut. Jelly-o candy canes biscuit bear claw icing caramels cookie chupa chups. Bonbon candy
+                dessert.</P>
+
+            <h1>Heading 1</h1>
+            <p>Danish lemon drops jelly-o jujubes marshmallow. Powder oat cake lemon drops. Cotton candy chupa chups
+                biscuit cake. Candy toffee tart gingerbread bonbon sweet roll chocolate. Choclate croissant caramels
+                tart applicake liquorice fruitcake tart halvah.
+            </p>
+            <h2>Heading 2</h2>
+            <p>Danish lemon drops jelly-o jujubes marshmallow. Powder oat cake lemon drops. Cotton candy chupa chups
+                biscuit cake. Candy toffee tart gingerbread bonbon sweet roll chocolate. Choclate croissant caramels
+                tart applicake liquorice fruitcake tart halvah.</p>
+            <div class="socials">
+                <button class="twitter"><i class="fa-brands fa-twitter"></i>Tweet</button> <p>357</p>
+                <button class="facebook"><i class="fa-brands fa-square-facebook"></i>Like</button><p>753</p>
+                <button class="google"><i class="fa-brands fa-google"></i>Share</button><p>537</p>
+            </div>
+
+            <hr>
+
+        </div>
+<!-- contents of middle part ends here  -->
+<!-- contents of right side start here -->
+        <div class="right">
+
+            <input type="text" class="search">
+            <button class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+
+            <div class="category">
+                <h3>Blog Categories</h3>
+
+                <input type="radio" name="category" id=""> <label for="">Web Development</label> <br>
+                <input type="radio" name="category" id=""> <label for="">E-commerce</label><br>
+                <input type="radio" name="category" id=""><label for="">Brand Identity</label><br>
+                <input type="radio" name="category" id=""><label for="">Web Design</label><br>
+                <input type="radio" name="category" id=""><label for="">Mobile/Apps Development</label><br>
+                <input type="radio" name="category" id=""><label for="">Web Marketing</label><br>
+                <input type="radio" name="category" id=""><label for="">Flash/Flex Development</label><br>
+            </div>
+
+            <div class="feed">
+                <h3>Flickr Feed</h3>
+
+                <div class="boxes">
+                    <div class="outer-box">
+                        <div class="inner">
+                        </div>
+                    </div>
+                    <div class="outer-box active-box">
+                        <div class="inner">
+                        </div>
+                    </div>
+                    <div class="outer-box">
+                        <div class="inner">
+                        </div>
+                    </div>
+                    <div class="outer-box">
+                        <div class="inner">
+                        </div>
+                    </div>
+                    <div class="outer-box">
+                        <div class="inner">
+                        </div>
+                    </div>
+                    <div class="outer-box">
+                        <div class="inner">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tags">
+
+                <h3>Popular Tags</h3>
+
+                <div class="tag">
+                    <div class="custom-shape"><i class="fa-regular fa-circle"></i>icons</div>
+                    <div class="custom-shape "><i class="fa-regular fa-circle"></i>interface</div>
+                    <div class="custom-shape"><i class="fa-regular fa-circle"></i>web</div>
+                    <div class="custom-shape"><i class="fa-regular fa-circle"></i>modern</div>
+                    <div class="custom-shape"><i class="fa-regular fa-circle"></i>trend</div>
+                    <div class="custom-shape"><i class="fa-regular fa-circle"></i>paper</div>
+                    <div class="custom-shape"><i class="fa-regular fa-circle"></i>fasion</div>
+                    <div class="custom-shape"><i class="fa-regular fa-circle"></i>online</div>
+                    <div class="custom-shape"><i class="fa-regular fa-circle"></i>typo</div>
+                </div>
+
+
+
+            </div>
+
+            <div class="featured-work">
+                <h3>Featured Works</h3>
+                <div class="out">
+                    <div class="in">
+
+                    </div>
+                </div>
+
+                <p>Cake cheesecake powder wafer thing sesame snaps fruitcake.</p>
+
+                <a href="">Read More <span><i class="fa-solid fa-arrow-right"></i></span></a>
+            </div>
+
+            <!-- contents of right side ends here  -->
+        </div>
+    </div>
+
+     <!-- container of main contents ends here -->
+
+
+
+     <!-- comment section starts here -->
+    <h3 style="margin-left: 23.5rem;">Comments(57)</h3>
+    <div class="lower">
+       
+        <div class="comment">
+            <div class="profile-box">
+                <div class="profile">
+                    <img src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg" alt="">
+                </div>
+             </div>
+             <div class="txt">
+                <h4>Nick McPaul</h4>
+                <p>
+    
+                    Chocolate cake gingerbread dessert sweet roll biscuit chocolate tart. Chupa chups marzipan choco- late cake jujubes lollipop. Powder halvah jujubes cheesecake gummies candy canes faworki. Pudding macaroon gummi bears soufflé icing cheesecake.</p>
+             
+             <div class="down">
+                
+                <div class="lft">
+                    <p class="time">7 minutes ago</p>
+                </div>
+                
+                <div class="rht"><i class="fa-solid fa-share"></i> share</div>
+                
+                
+            </div>
+                    
+             <hr>
+                </div>
+        </div>
+        <div class="comment shifted">
+            <div class="profile-box">
+                <div class="profile">
+                    <img src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg" alt="">
+                </div>
+             </div>
+             <div class="txt">
+                <h4>Nick McPaul</h4>
+                <p>
+    
+                    Chocolate cake gingerbread dessert sweet roll biscuit chocolate tart. Chupa chups marzipan choco- late cake jujubes lollipop. Powder halvah jujubes cheesecake gummies candy canes faworki. Pudding macaroon gummi bears soufflé icing cheesecake.</p>
+                    <div class="down">
+                
+                        <div class="lft">
+                            <p class="time">7 minutes ago</p>
+                        </div>
+                        
+                        <div class="rht"><i class="fa-solid fa-share"></i> share</div>
+                        
+                        
+                    </div>
+             <hr>
+                </div>
+        </div>
+        <div class="comment">
+            <div class="profile-box">
+                <div class="profile">
+                    <img src="https://img.freepik.com/premium-vector/man-avatar-profile-picture-vector-illustration_268834-538.jpg" alt="">
+                </div>
+             </div>
+             <div class="txt">
+                <h4>Nick McPaul</h4>
+                <p>
+    
+                    Chocolate cake gingerbread dessert sweet roll biscuit chocolate tart. Chupa chups marzipan choco- late cake jujubes lollipop. Powder halvah jujubes cheesecake gummies candy canes faworki. Pudding macaroon gummi bears soufflé icing cheesecake.</p>
+                    <div class="down">
+                
+                        <div class="lft">
+                            <p class="time">7 minutes ago</p>
+                        </div>
+                        
+                        <div class="rht"><i class="fa-solid fa-share"></i> share</div>
+                        
+                        
+                    </div>
+             <hr>
+                </div>
+        </div>
+<!-- comments form  -->
+        <h3 style="margin-left: -37.5rem;">Leave a Comment</h3>
+<div class="add-cmt">
+
+    <div class="details">
+        <input type="text" placeholder="Name*">
+        <input type="text" placeholder="E-Mail*">
+        <input type="text" placeholder="yoursite.com">
+        <p>Field marked with * are mandatory!</p>
+    </div>
+    <div class="msg">
+        <textarea name="" id="" cols="60" rows="9" placeholder="Message" draggable ="false"></textarea>
+        <BUTTON>send it</BUTTON>
+    </div>
+
+</div>
+       
+
+        
+    </div>
+<!-- footer -->
+    <footer >
+        <div class="footer-container">
+            <div class="column">
+                <h3>Text Widget</h3>
+                <p>
+    
+                    Brownie candy ice cream. Jelly chupa chups chupa chups toocake. Dessert apple pie lemon drops.
+                </p>
+                <p> Candy canes tiramisu wypa gummies jujubes macaroon Sweet roll biscuiti apple pie sweet.</p>
+    
+            </div>
+    
+            <div class="column">
+    
+    
+                <h3>SUBSCRIBE US</h3>
+                <p>Jelly beans tootsie roll oat cake dingo pie wafer sweet roll. Sweet gerbread halvah.</p>
+                <input type="text" class="search">
+            <button ><i class="fa-solid fa-envelope"></i></button>
+            </div>
+    
+            <div class="column">
+    
+                <h3>Latest Tweets</h3>
+                <p>
+    
+                    @Brownie candy ice cream. Jelly chupa chups chupa chups toocake.
+                </p>
+                <p class="time">7 hours ago
+                </p>
+                <hr>
+                <p>@Brownie candy ice cream. Jelly chupa chups chupa chups toocake.</p>
+    
+                <p class="time">7 hours ago
+                </p>
+    
+            </div>
+    
+            <div class="column">
+                <h3>Get In Touch</h3>
+                <p>Jelly beans tootsie roll oat cake dingo pie wafer sweet roll. Sweet gerbread halvah.</p>
+            
+                <div class="socials">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-solid fa-basketball on" id="on"></i>
+                    <i class="fa-brands fa-flickr"></i>
+                    <i class="fa-brands fa-google-plus-g"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+            
+            </div>
+        </div>
+        
+    </footer>
+
+
+</body>
+
+</html>
